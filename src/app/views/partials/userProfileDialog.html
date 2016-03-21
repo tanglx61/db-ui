@@ -1,0 +1,93 @@
+<md-dialog aria-label="List dialog">
+    <md-dialog-content layout="row" ng-cloak>
+        <form name="userForm">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>User Profile & Analytics</h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" ng-click="vm.cancel()">
+                        <i class="material-icons">close</i>
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+             <div layout layout="row" class="dialogRow">
+                <md-input-container class="url-input">
+                    <label>email</label>
+                    <input ng-model="vm.getCurrentUser().email"></input>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Username</label>
+                    <input ng-model="vm.getCurrentUser().username"></input>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>Password</label>
+                    <input ng-model="vm.getCurrentUser().password"></input>
+                </md-input-container>
+            </div>
+
+            <div layout layout="row" class="dialogRow">
+
+                <md-input-container flex>
+                    <label>Total Visits</label>
+                    <input ng-model="vm.currentUserAnalyticsProfile.total_visits"></input>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>Total Browsing Duration</label>
+                    <input ng-model="vm.currentUserAnalyticsProfile.total_browsing_duration"></input>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>Total Posts</label>
+                    <input ng-model="vm.currentUserAnalyticsProfile.total_posts"></input>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>Total Comments</label>
+                    <input ng-model="vm.currentUserAnalyticsProfile.total_comments"></input>
+                </md-input-container>
+
+
+            </div>
+
+            <div layout layout="row" class="dialogRow">
+
+                <md-input-container flex>
+                    <label>Total Post Upvotes</label>
+                    <input ng-model="vm.currentUserAnalyticsProfile.total_post_upvotes"></input>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>Total Post Downvotes</label>
+                    <input ng-model="vm.currentUserAnalyticsProfile.total_post_downvotes"></input>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>Total Comment Upvotes</label>
+                    <input ng-model="vm.currentUserAnalyticsProfile.total_comment_upvotes"></input>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>Total Comment Downvotes</label>
+                    <input ng-model="vm.currentUserAnalyticsProfile.total_comment_downvotes"></input>
+                </md-input-container>
+
+
+
+            </div>
+
+
+<!-- 
+            <md-dialog-actions>
+                <md-button ng-click="vm.addUser()" class="md-primary">Add User</md-button>
+                <md-button ng-click="vm.addFile()" ng-show="vm.fileChecked" class="md-primary">Add File</md-button>
+            </md-dialog-actions>
+ -->
+        </form>
+    </md-dialog-content>
+
+    
+
+</md-dialog>

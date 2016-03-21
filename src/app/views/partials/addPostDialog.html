@@ -1,0 +1,38 @@
+<md-dialog aria-label="List dialog">
+    <md-dialog-content layout="row" ng-cloak>
+        <form name="userForm">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Add Post</h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" ng-click="vm.cancel()">
+                        <i class="material-icons">close</i>
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+             <div layout layout="row" class="dialogRow">
+             <md-input-container class="url-input">
+                    <label>Image URL</label>
+                    <input ng-model="vm.imageUrl"></input>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Title</label>
+                    <input ng-model="vm.title"></input>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>uid</label>
+                    <input ng-model="vm.uid"></input>
+                </md-input-container>
+            </div>
+
+            <md-dialog-actions>
+                <md-button ng-click="vm.addPost()" class="md-primary">Add Post</md-button>
+            </md-dialog-actions>
+        </form>
+    </md-dialog-content>
+
+    
+
+</md-dialog>

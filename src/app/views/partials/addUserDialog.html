@@ -1,0 +1,42 @@
+<md-dialog aria-label="List dialog">
+    <md-dialog-content layout="row" ng-cloak>
+        <form name="userForm">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>Add User</h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" ng-click="vm.cancel()">
+                        <i class="material-icons">close</i>
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+             <div layout layout="row" class="dialogRow">
+             <md-input-container class="url-input">
+                    <label>email</label>
+                    <input ng-model="vm.email"></input>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Username</label>
+                    <input ng-model="vm.username"></input>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>Password</label>
+                    <input ng-model="vm.password"></input>
+                </md-input-container>
+            </div>
+
+
+            <p class="error-text" ng-show="vm.error"> Duplicate username or email! </p>
+
+            <md-dialog-actions>
+                <md-button ng-click="vm.addUser()" class="md-primary">Add User</md-button>
+                <md-button ng-click="vm.addFile()" ng-show="vm.fileChecked" class="md-primary">Add File</md-button>
+            </md-dialog-actions>
+        </form>
+    </md-dialog-content>
+
+    
+
+</md-dialog>

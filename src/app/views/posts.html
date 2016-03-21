@@ -1,0 +1,26 @@
+
+
+
+
+<div layout-gt-md="row" >
+  <post-container ng-repeat="post in vm.posts" title="{{post.title}}" image="{{post.content}}" points="{{post.votes}}" pid="{{post.pid}}"> </post-container>
+</div>
+
+
+ <md-toolbar layout="row" layout-align="end center">
+	 <md-button hide-sm class="toolbar-button" aria-label="Add Person" ng-click="vm.changeSorting('pid')">
+	     Date
+	  </md-button>
+
+	  <md-button hide-sm class="toolbar-button" aria-label="Add Person" ng-click="vm.changeSorting('votes')">
+	     Votes
+	  </md-button>
+        <md-button hide-sm class="toolbar-button" aria-label="Add Person" ng-click="vm.previousPage()">
+            <i class="material-icons">keyboard_arrow_left</i>
+        </md-button>
+        <md-button hide-sm class="toolbar-button" aria-label="Add Post" ng-click="vm.nextPage()">
+            <i class="material-icons">keyboard_arrow_right</i>
+        </md-button>
+
+ </md-toolbar>
+

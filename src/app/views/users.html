@@ -1,0 +1,33 @@
+<div class="table-responsive-vertical md-whiteframe-z1">
+    <table id="table" class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th>uid</th>
+            <th>username</th>
+            <th>email</th>
+            <th>password</th>
+            <th>created_on</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in vm.users" ng-click="vm.userClicked($event, user)">
+            <td data-title="uid">{{user.uid}}</td>
+            <td data-title="username">{{user.username}}</td>
+            <td data-title="email">{{user.email}}</td>
+            <td data-title="password">{{user.password}}</td>
+            <td data-title="created_on">{{user.created_on}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <md-toolbar layout="row" layout-align="end center">
+        <md-button hide-sm class="toolbar-button" aria-label="Add Person" ng-click="vm.previousPage()">
+            <i class="material-icons">keyboard_arrow_left</i>
+        </md-button>
+        <md-button hide-sm class="toolbar-button" aria-label="Add Post" ng-click="vm.nextPage()">
+            <i class="material-icons">keyboard_arrow_right</i>
+        </md-button>
+
+    </md-toolbar>
+</div>
